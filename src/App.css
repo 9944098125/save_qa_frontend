@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0 0;
+  padding: 0 0;
+  font-family: "Jost", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+  --primary-color: #8903e2;
+  --secondary-color: #04ffe6;
+}
+.glass-effect {
+  min-width: 70%;
+  /* From https://css.glass */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.224);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+@media screen and (max-width: 875px) {
+  .glass-effect {
+    width: 85%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@media screen and (max-width: 426px) {
+  .glass-effect {
+    width: 95%;
+  }
+}
+.form-control:active,
+.form-control:focus {
+  border: 2px solid var(--primary-color) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.show-text {
+  background-color: rgb(141, 7, 230);
+  border-radius: 7px;
+  color: white;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+.head {
+  font-size: 50px;
+  font-style: italic;
+  letter-spacing: 1.3px;
+  color: black;
+}
+.redirect-text {
+  font-size: 16px;
+  font-style: italic;
+  position: absolute;
+}
+.redirect-text h6 {
+  color: rgb(153, 0, 235);
+}
+.redirect-text h6:hover {
+  text-decoration: underline;
+}
+.content {
   min-height: 100vh;
+  padding-top: 80px;
+}
+.primary-btn {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  border: none !important;
+  background-color: var(--primary-colo);
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white !important;
+}
+.whole-items-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.text-width-in-box {
+  width: 85%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-header .btn-close {
+  color: var(--secondary-color) !important;
+  box-shadow: 2px 2px 2px 2px var(--secondary-color);
+  background-color: white !important;
 }

@@ -1,0 +1,63 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  z-index: 100;
+  box-shadow: 1px 1px 2px 2px var(--primary-color);
+}
+.create-btn {
+  width: 100px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-colo);
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white !important;
+}
+.avatar-container-with-down-arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+}
+.avatar-container-with-down-arrow img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.absolute-container {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+}
+.logout-btn {
+  width: 100px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-colo);
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white !important;
+}
+.down-arrow {
+  font-size: 20px;
+}

@@ -1,0 +1,48 @@
+.register-container-with-bg {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  padding-right: 5%;
+  position: relative;
+}
+.register-container-with-bg::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../Assets/register-bg.jpg);
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.6;
+}
+@media screen and (max-width: 875px) {
+  .register-container-with-bg {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.register-btn {
+  width: 100% !important;
+  height: 50px;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: 1px 1px 1px 1px rgb(192, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.primary-input-field {
+  width: 100% !important;
+  height: 45px;
+  border-radius: 9px;
+  padding: 4px 15px;
+}
+.primary-input-field:active,
+.primary-input-field:focus {
+  height: 55px;
+}

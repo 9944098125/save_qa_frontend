@@ -1,0 +1,45 @@
+.login-container-with-bg {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  padding-right: 5%;
+  position: relative;
+}
+.login-container-with-bg::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../Assets/login-bg.webp);
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.6;
+}
+@media screen and (max-width: 875px) {
+  .login-container-with-bg {
+    flex-direction: column;
+  }
+}
+.login-input-field {
+  width: 100% !important;
+  line-height: 2.5 !important;
+  border-radius: 9px;
+  padding: 4px 15px;
+}
+.login-input-field:active,
+.login-input-field:focus {
+  line-height: 3 !important;
+}
+.login-btn {
+  line-height: 2.5 !important;
+  width: 100%;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
