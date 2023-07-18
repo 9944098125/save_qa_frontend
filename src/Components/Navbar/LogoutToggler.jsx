@@ -27,7 +27,7 @@ function LogoutToggler({ text, userAvatar, logout }) {
           type="button"
           className="btn down-arrow"
         >
-          ▼
+          ≡
         </button>
       </div>
       {showDropDown && (
