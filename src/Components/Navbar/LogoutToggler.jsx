@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+import ClickOutside from "../../Helpers/ClickOutside";
+
 function LogoutToggler({ text, userAvatar, logout }) {
   const [showDropDown, setShowDropDown] = React.useState(false);
   const SwitchMode = useSelector((state) => state.toggleThemeReducer);
@@ -8,6 +10,10 @@ function LogoutToggler({ text, userAvatar, logout }) {
   function toggleShowDropDown() {
     setShowDropDown(!showDropDown);
   }
+
+  const logoutBtnRef = React.useRef(null);
+
+  ClickOutside(logoutBtnRef, toggleShowDropDown);
 
   return (
     <React.Fragment>
@@ -25,7 +31,7 @@ function LogoutToggler({ text, userAvatar, logout }) {
         </button>
       </div>
       {showDropDown && (
-        <div className="absolute-container">
+        <div ref={logoutBtnRef} className="absolute-container zI">
           <button onClick={logout} type="button" className="btn logout-btn">
             {text}
           </button>

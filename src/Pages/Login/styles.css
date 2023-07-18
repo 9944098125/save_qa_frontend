@@ -12,6 +12,7 @@
   position: absolute;
   background-image: url(../../Assets/login-bg.webp);
   background-size: cover;
+  background-position: center;
   top: 0;
   bottom: 0;
   right: 0;

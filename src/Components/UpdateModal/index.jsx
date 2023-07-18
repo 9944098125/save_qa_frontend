@@ -10,7 +10,7 @@ import AlertModal from "../Modal";
 export default function UpdateModal(props) {
   const dispatch = useDispatch();
   const { showUpdateModal, qa, setShowUpdateModal } = props;
-  console.log(qa);
+  // console.log(qa);
 
   // with useCallback we are creating a new instance of this function
   // which will reduce unnecessary re-creation of the function for

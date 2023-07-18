@@ -21,11 +21,11 @@ export const login = (data) => async (dispatch) => {
     console.log(err);
     dispatch({
       type: LOGIN_FAIL,
-      payload: err.response?.data,
+      payload: err.response?.data.message,
     });
     // if some error like wrong password or something it shows
     // a failure modal
-    dispatch(alertActions.error(err.response.data.message));
+    dispatch(alertActions.error(err.response?.data.message));
     setTimeout(() => {
       dispatch(alertActions.error_clear());
       dispatch(alertActions.clear());

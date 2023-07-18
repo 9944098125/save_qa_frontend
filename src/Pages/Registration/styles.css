@@ -13,6 +13,7 @@
   position: absolute;
   background-image: url(../../Assets/register-bg.jpg);
   background-size: cover;
+  background-position: center;
   top: 0;
   bottom: 0;
   right: 0;

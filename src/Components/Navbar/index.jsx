@@ -44,7 +44,7 @@ export default function Navbar() {
           style={{ color: SwitchMode.darkMode ? "white" : "black" }}
         >
           {" "}
-          Hey {user.name.split(" ")[0]}, you want
+          Hey {user?.name.split(" ")[0]}, you want
           {SwitchMode.darkMode ? " light mode" : " dark mode"} ?
         </button>
         <LogoutToggler

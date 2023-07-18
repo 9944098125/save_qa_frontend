@@ -41,8 +41,8 @@
 }
 .absolute-container {
   position: absolute;
-  right: 20px;
-  top: 70px;
+  right: 150px;
+  top: 15px;
 }
 .logout-btn {
   width: 100px;

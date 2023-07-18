@@ -11,7 +11,7 @@ export const register = (data) => async (dispatch) => {
     if (response) {
       dispatch({
         type: REGISTER_SUCCESS,
-        payload: response.data && response.data.message,
+        payload: response.data?.message,
       });
       //   console.log(response.data);
       dispatch(alertActions.success(response.data.message));
