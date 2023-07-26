@@ -22,10 +22,11 @@ export default function login(state = initialState, action) {
         loading: true,
       };
     case LOGIN_SUCCESS:
-      // localStorage.setItem("token", payload.token);
+      localStorage.setItem("token", payload.token);
       localStorage.setItem("user_id", JSON.stringify(payload.user.id));
       localStorage.setItem("logged_in", true);
       localStorage.setItem("user", JSON.stringify(payload.user));
+      localStorage.setItem("is_authenticated", true);
       return {
         ...state,
         ...payload,
@@ -47,6 +48,7 @@ export default function login(state = initialState, action) {
       localStorage.removeItem("user_id");
       localStorage.removeItem("logged_in");
       localStorage.removeItem("user");
+      localStorage.removeItem("is_authenticated");
       return {
         ...state,
         token: null,
