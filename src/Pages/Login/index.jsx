@@ -45,7 +45,7 @@ export default function Login() {
   // if isAuthenticated state in login reducer is true or
   // token in the local storage has something then navigate to home
   React.useEffect(() => {
-    if (LoginState.isAuthenticated) {
+    if (LoginState.token || localStorage.getItem("token")) {
       navigate("/", { replace: true });
     }
   }, [navigate, LoginState.isAuthenticated]);

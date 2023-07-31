@@ -13,8 +13,8 @@ export default function ClickOutside(ref, func) {
   };
 
   React.useEffect(() => {
-    // the above function is executed when mouse click happens
-    // or touch pad clicked
+    // the above function is executed when mouse is clicked happens
+    // or touch pad touched
     document.addEventListener("mousedown", listener);
     document.addEventListener("touchstart", listener);
 

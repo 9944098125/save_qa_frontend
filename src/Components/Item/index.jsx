@@ -1,5 +1,7 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import {
   ItemContainer,
@@ -65,13 +67,17 @@ export default function Item(props) {
     }
   }, [qa, AlertState.type, dispatch, userId]);
 
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const SwitchMode = useSelector((state) => state.toggleThemeReducer);
 
   return (
     <React.Fragment>
       <div className="whole-items-container">
         {AlertState.message && <AlertModal show={true} />}
-        <GlassEffect>
+        <GlassEffect data-aos={idx % 2 ? "fade-up" : "fade-down"}>
           <ItemContainer color={SwitchMode.darkMode ? "white" : "black"}>
             <RowsInItem jc="space-between">
               <div className="d-flex align-items-center gap-5 text-width-in-box">
