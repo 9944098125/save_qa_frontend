@@ -7,7 +7,7 @@ export default function ProtectedRoute(props) {
   const LoginState = useSelector((state) => state.login);
   // with this effect a user without logging in can't come in to the home page
   React.useEffect(() => {
-    if (!LoginState.token || !localStorage.getItem("token")) {
+    if (!localStorage.getItem("token")) {
       navigate("/login", { replace: true });
     }
   }, []);
